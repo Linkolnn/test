@@ -103,7 +103,10 @@ const footerData = ref({
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+
+    @include laptop {
+      gap: 10px;
+    }
     
     @include tablet {
       flex-wrap: wrap;
