@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
-import CustomSelect from './CustomSelect.vue';
+import CustomSelect from '@components/CustomSelect.vue';
+import fileIcon from '@/assets/icons/file.svg';
 
 const formData = ref({
   systemType: '',
@@ -113,7 +114,7 @@ const handleSliderChange = (event) => {
             class="btn btn--primary"
             @click="handleFileClick"
           >
-            <img src="@/assets/icons/file.svg" alt="File" class="order-form__file-icon">
+            <img :src="fileIcon" alt="File" class="order-form__file-icon">
             <span>{{ fileName || 'ПРИКРЕПИТЬ ФАЙЛ' }}</span>
           </button>
         </div>

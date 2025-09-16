@@ -1,32 +1,37 @@
 <script setup>
 import { ref } from 'vue';
-import OrderStep from './OrderStep.vue';
-import OrderForm from './OrderForm.vue';
+import OrderStep from '@/components/OrderStep.vue';
+import OrderForm from '@/components/OrderForm.vue';
+import searchIcon from '@/assets/icons/search.png';
+import percentIcon from '@/assets/icons/percent.png';
+import subtractIcon from '@/assets/icons/Subtract.png';
+import messageIcon from '@/assets/icons/message.png';
+import moneyIcon from '@/assets/icons/money.png';
 
 const orderSteps = ref([
   {
     id: 1,
-    icon: '/src/assets/icons/search.png',
+    icon: searchIcon,
     text: 'Lorem ipsum dolor sit amet'
   },
   {
     id: 2,
-    icon: '/src/assets/icons/percent.png',
+    icon: percentIcon,
     text: 'Consecteturadipiscing elit'
   },
   {
     id: 3,
-    icon: '/src/assets/icons/Subtract.png',
+    icon: subtractIcon,
     text: 'Sed do eiusmod tempor'
   },
   {
     id: 4,
-    icon: '/src/assets/icons/message.png',
+    icon: messageIcon,
     text: 'Esse cillum dolore eu fugiat'
   },
   {
     id: 5,
-    icon: '/src/assets/icons/money.png',
+    icon: moneyIcon,
     text: 'Excepteur sint occaecat cupidatat non proident'
   }
 ]);

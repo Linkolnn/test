@@ -1,35 +1,40 @@
 <script setup>
 import { ref } from 'vue';
+import qiwiIcon from '@/assets/icons/qiwi.png';
+import yandexMoneyIcon from '@/assets/icons/yandexmoney.png';
+import webMoneyIcon from '@/assets/icons/webmoney.png';
+import emailIcon from '@/assets/icons/email.png';
+import vkIcon from '@/assets/icons/vk.png';
 
 const footerData = ref({
   paymentSystems: [
     {
       id: 1,
       name: 'QIWI wallet',
-      icon: '/src/assets/icons/qiwi.png'
+      icon: qiwiIcon
     },
     {
       id: 2,
       name: 'Yandex Money',
-      icon: '/src/assets/icons/yandexmoney.png'
+      icon: yandexMoneyIcon
     },
     {
       id: 3,
       name: 'Web Money',
-      icon: '/src/assets/icons/webmoney.png'
+      icon: webMoneyIcon
     }
   ],
   contacts: [
     {
       id: 1,
       text: 'info@ipsum228.com',
-      icon: '/src/assets/icons/email.png',
+      icon: emailIcon,
       link: 'mailto:info@ipsum228.com'
     },
     {
       id: 2,
       text: 'Мы вконтакте',
-      icon: '/src/assets/icons/vk.png',
+      icon: vkIcon,
       link: '#'
     }
   ]
@@ -46,7 +51,7 @@ const footerData = ref({
         
         <div class="footer__separator"></div>
         <div 
-          v-for="(payment, index) in footerData.paymentSystems"
+          v-for="payment in footerData.paymentSystems"
           :key="payment.id"
           class="footer__item footer__item--payment"
         >
@@ -60,7 +65,7 @@ const footerData = ref({
         </div>
         <div class="footer__separator"></div>
         <a 
-          v-for="(contact, index) in footerData.contacts"
+          v-for="contact in footerData.contacts"
           :key="contact.id"
           :href="contact.link"
           class="footer__item footer__item--contact"
