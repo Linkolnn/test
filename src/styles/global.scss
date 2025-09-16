@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import './variables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Lato", sans-serif;
+}
+
+.container {
+    max-width: 1172px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    
+    &--secondary {
+        background: $secondary;
+        color: $white;
+        border-color: $secondary-border;
+        
+        &:hover {
+            background: darken($secondary, 10%);
+            border-color: darken($secondary, 10%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba($secondary, 0.3);
+        }
+        
+        &:active {
+            transform: translateY(0);
+        }
+    }
+    
+    &--primary {
+        background: $white;
+        color: $black;
+        border-color: $primary-border;
+        
+        &:hover {
+            background: $white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba($black, 0.1);
+        }
+        
+        &:active {
+            transform: translateY(0);
+        }
+    }
+    
+    &--file {
+        background: transparent;
+        color: $white;
+        border-color: $secondary;
+        font-size: 15px;
+        padding: 12px 20px;
+        
+        &:hover {
+            background: rgba($secondary, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba($secondary, 0.2);
+        }
+        
+        &:active {
+            transform: translateY(0);
+        }
+    }
+}
